@@ -1,8 +1,6 @@
 'use server'
 
 import { supabaseClient } from "@/utils/supabase/client";
-import { PrismaClient } from "@prisma/client"
-import { SupabaseClient } from "@supabase/supabase-js";
 import { revalidatePath } from "next/cache";
 
 export async function GetUsers() {

@@ -1,5 +1,5 @@
 import { supabaseClient } from "@/utils/supabase/client";
-import { AddUser, GetUsers } from "@/actions/UserActions";
+import { AddUser } from "@/actions/UserActions";
 import UserItem from "./components/user";
 
 
