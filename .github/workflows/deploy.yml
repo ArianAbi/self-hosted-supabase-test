@@ -36,12 +36,9 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > private_key.pem
         chmod 600 private_key.pem
         ssh -i private_key.pem -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP <<EOF
-          cd /path/to/your/project
+          cd /var/www/self-hosted-supabase-test/
           git pull origin main  # Pull latest code from GitHub
           npm install  # Install dependencies
           npm run build  # Build the project
-          pm2 restart your-app-name  # Restart app if using pm2, or any other deployment steps you need
+          pm2 restart server  # Restart app if using pm2, or any other deployment steps you need
         EOF
-
-    - name: restart pm2
-      run : pm2 restart server
