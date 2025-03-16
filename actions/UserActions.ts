@@ -32,7 +32,7 @@ export async function AddUser(formData: FormData) {
 export async function DeleteUser(id: number) {
 
     try {
-        const user = await supabaseClient.from('todos').delete().eq('id', id)
+        await supabaseClient.from('todos').delete().eq('id', id)
         console.log('deleted');
 
         revalidatePath('/')
