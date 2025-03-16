@@ -19,7 +19,7 @@ jobs:
         node-version: '14'  # Adjust the version as needed
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build the project
       run: npm run build  # Adjust if you're using a different build command
