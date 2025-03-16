@@ -4,11 +4,7 @@ import { supabaseClient } from "@/utils/supabase/client";
 import { revalidatePath } from "next/cache";
 
 export async function GetUsers() {
-
-    // const prisma = new PrismaClient()
-
     try {
-        // const users = await prisma.user.findMany()
         const { data } = await supabaseClient.from('todos').select('*')
         console.log('created');
         console.log(data);
