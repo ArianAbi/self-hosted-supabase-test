@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <div className="p-5">
-      <h2>Self-Hosted Supabase Test</h2>
+      <h2>Self-Hosted Supabase Test - AutoUpdated </h2>
 
       <form action={AddUser}>
         <label className="block mt-5 text-base">todo title</label>
